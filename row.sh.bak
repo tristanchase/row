@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# row
+#
+# A script that works within loco (which see).
+#
+linenum=$1
+cmd=$2
+obj=`awk '$1 == '$linenum' { print $2 } ' "${outfile}"`
+# If $cmd is empty, shell will try to execute $obj.
+$cmd $obj
+
+# This could be improved by adding a command line flag such as "-c"
+# and then performing some sort of while loop and shift combination
+# to capture the intended command after the $linenum variable is filled.
+# There is a good example on
+# http://www.shelldorado.com/goodcoding/cmdargs.html .
+# 
+# There needs to be a way to append the remaining arguments to $cmd so that 
+# it behaves like 
+# !row 3 'ls -l'
