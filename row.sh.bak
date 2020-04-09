@@ -15,7 +15,7 @@ $cmd $obj
 # to capture the intended command after the $linenum variable is filled.
 # There is a good example on
 # http://www.shelldorado.com/goodcoding/cmdargs.html .
-# 
-# There needs to be a way to append the remaining arguments to $cmd so that 
-# it behaves like 
+#
+# There needs to be a way to append the remaining arguments to $cmd so that
+# it behaves like
 # !row 3 'ls -l'
